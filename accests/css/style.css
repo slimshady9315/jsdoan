@@ -1,0 +1,396 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #fff !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  height: 65px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+#box-main-display {
+  background-color: white;
+  display: flex;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-mobile {
+  display: none;
+}
+.menu-mobile-show {
+  display: block;
+}
+.box-main-header {
+}
+
+.main-header .logo {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 10px;
+}
+
+.main-header .logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.wrap-menu .menu-main {
+  display: flex;
+  margin-bottom: 0;
+  display: none;
+}
+
+.wrap-menu .active {
+  display: flex;
+}
+
+.wrap-menu .menu-main i {
+  font-size: 13px;
+}
+
+.wrap-menu .menu-main li {
+  list-style: none;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.wrap-menu .menu-main li a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding: 10px 0;
+}
+
+.wrap-menu .menu-main li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.wrap-menu .menu-main li:hover > a::after {
+  width: 100%;
+}
+
+.wrap-menu .menu-main .sub-menu {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  width: 100%;
+  display: none;
+}
+
+.wrap-menu .menu-main li:hover .sub-menu {
+  display: block;
+}
+
+.wrap-menu .menu-main .sub-menu li a {
+  font-size: 15px;
+}
+
+.wrap-menu .menu-main .sub-menu li a::after {
+  content: none;
+}
+
+.wrap-menu .menu-main .sub-menu li a:hover {
+  color: #155bf6;
+}
+
+.user-main {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.user-main li {
+  list-style: none;
+  margin-left: 12px;
+  position: relative;
+}
+
+.user-main li i {
+  font-size: 20px;
+  color: #000;
+}
+
+.user-main li span {
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -12px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-main {
+  padding-top: 20px;
+}
+
+.slider-main img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.service-main {
+}
+
+.service-main .image img {
+  width: 100%;
+  height: auto;
+}
+
+.service-main .rowshow-js {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-main .item {
+  max-width: 100%;
+}
+
+.service-main .item img {
+  width: 265.25px;
+}
+
+.detail {
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.detail .price {
+  display: flex;
+  justify-content: center;
+}
+.detail .price span {
+  margin-right: 10px;
+}
+.detail .price-del {
+  text-decoration: line-through;
+}
+
+.tittle {
+  font-size: 50px;
+  font-weight: 500;
+  color: #959595;
+  padding: 0 0 10px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tittle a {
+  text-decoration: none;
+  text-align: center;
+  color: darkgoldenrod;
+  /* font-style: italic; */
+  /* border-bottom: 2px solid blue; */
+}
+
+/* .hot-products .container {
+  display: flex;
+  max-width: 100%;
+} */
+
+.hot-products .product img {
+  width: 100%;
+  height: 400px;
+}
+
+/* .hot-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+.hot-products .container .row .product {
+  margin-top: 20px;
+}
+/* .hot-products .image {
+  position: relative;
+} */
+
+.add-to-cart {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  flex-grow: 1;
+  /* để phần "Add to Cart" căn giữa dưới hình ảnh */
+}
+
+.add-to-cart button {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 1000px;
+}
+
+.add-to-cart button:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.product-item-slider {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product {
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.swiper-slide {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hot-products .add-to-cart h3 {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .wrap-menu,
+  .user-main {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    z-index: 9999;
+  }
+}
+
+@media (min-width: 767px) {
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+.sales {
+  color: red;
+}
+
+.col-12 .product {
+  margin-bottom: 20px;
+}
+
+.wrap-countdown {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wrap-countdown ul {
+  display: flex;
+}
+
+.wrap-countdown ul li {
+  list-style: none;
+  background-color: #000000;
+  margin-left: 10px;
+  border-radius: 6px;
+}
+
+.title-countdown {
+  font-size: 18px;
+  color: #155bf6;
+  margin-right: 6px;
+}
+
+.wrap-countdown ul li h3 {
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  padding: 4px 15px;
+  margin: 0;
+}
+
+.wrap-countdown ul li p {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  padding: 4px 0;
+  border-top: 1px solid #ddd;
+}
+
+.home-policy {
+  display: flex;
+  margin-top: 30px;
+  border-top: 2px solid #eee;
+}
+.home-policy .container .home-policy-wrapper {
+  display: flex;
+}
+.home-policy_img img {
+  object-fit: cover;
+  width: 48px;
+  height: 48px;
+  margin: 10px;
+}
+.policy h2 {
+  font-size: 16px;
+  margin: 10px;
+}
+.policy p {
+  font-size: 14px;
+  margin: 10px;
+}
+.infor .name {
+  width: 100%;
+  float: left;
+  padding: 0.45em;
+  box-sizing: border-box;
+}
+.show {
+  display: block;
+  background-color: white;
+}
+.hide {
+  display: none;
+}
